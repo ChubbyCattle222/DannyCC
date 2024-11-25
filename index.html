@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danny C</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      max-width: 700px;
+      background-color: black;
+      color: white;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    .output {
+      margin: 15px 0;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #222;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: red;
+      color: white;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    a:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Danny C</h1>
+  <p>Click the button below to generate a review. Use the links to leave a review on Google or Yelp!</p>
+
+  <button onclick="generateReview()">Generate a Review</button>
+  <button onclick="copyToClipboard()">Copy to Clipboard</button>
+  <div id="reviewOutput" class="output"></div>
+
+  <a href="https://gorate.biz/leavechrisareview/" target="_blank">Leave a Google Review</a>
+  <a href="https://www.yelp.com/writeareview/biz/WdshnXVjeZq-MvVofMzuTA?review_origin=mobile-site-biz-details-review-feed-war-widget" target="_blank">Leave a Yelp Review</a>
+
+  <script>
+    function generateReview() {
+      const reviews = [
+        "Chubby Cattle is so unique because of their bold willingness to innovate. The arcade machines made me feel nostalgic with there collection of classic video games. Our server Danny C went over the menu and the layout of the restaurant. He explained that this is their flagship location and offers features like the arcade, sterilized eggs, and self serve drinks near Chubby Tea. Danny C asked if we had alergies or were celebrating anything. He cooked all the meats perfectly and paired them with the best sauces. The 90 minute dining limit felt just right, and the ice cream flavors like Taro and Matcha were a perfect way to end the meal. Danny C truely provided top tier service. Be sure to ask for Danny C if you visit for an unforgettable experience!",
+        "This restaurant stands out for its creativity and innovation. The arcade games was a fun way to pass time while waiting. Danny C, our server, explained the menu thouroughly and highlighted special features like the sterilized eggs, arcade, and self serve drinks at Chubby Tea. He also asked about alergies and special ocassions. Danny C cooked each cut of meat exactly to perfection and recommended excellent sauces. The dining time of 90 minutes seemed short at first, but it was plenty for the rich and flavorful meats. There soft serve ice cream flavors, like Sea Salt and Vanilla, are absolutely worth trying! The clean restrooms was also impressive. Danny C’s service was beyond amazing. Don’t miss out on asking for him when you visit!",
+        "Chubby Cattle is one of a kind because of there innovative touches. The arcade games kept me entertained and brought back memories. Danny C, our server, walked us through the menu and described the standout features, like the arcade, the sterilized eggs, and the Chubby Tea drink station. He also asked about any dietary restrictions or celebrations. Danny C cooked all of our meats with care and recommended sauces that matched perfectly. The 90 minute time limit worked well, and I made room for there delicious ice creams despite being full. The clean and well maintained restrooms left a great impression. Danny C’s excellent service made the experience unforgettable.",
+        "Chubby Cattle offers such a different experience. The arcade machines was so much fun and reminded me of my childhood. Danny C was our server, and he went over the menu and explained the restaurants unique features, like the self serve drink station, sterilized eggs, and arcade. He also asked us if we had any alergies or if it was a special ocassion. Danny C cooked the meats to perfection and paired each one with the best sauces. Though the dining limit was 90 minutes, it felt perfect. There ice cream options, especially Taro and Matcha, was delicious. Clean restrooms also showed how much they care about there customers. Danny C’s amazing service tied everything together!",
+        "The service at Chubby Cattle was outstanding. Danny C took the time to explain everything to us and make sure we had an amazing experience. The unique features, like the arcade and Chubby Tea drink station, really added to the atmosphere. Everything Danny C cooked was perfect, and the sauces he recommended paired wonderfully with the meats. It was such a memorable experience!"
+        // Add additional reviews as needed
+      ];
+
+      // Pick a random review
+      const randomReview = reviews[Math.floor(Math.random() * reviews.length)];
+
+      // Display the review
+      const outputDiv = document.getElementById("reviewOutput");
+      outputDiv.textContent = randomReview;
+    }
+
+    function copyToClipboard() {
+      const reviewText = document.getElementById("reviewOutput").textContent;
+      if (reviewText) {
+        navigator.clipboard.writeText(reviewText).then(() => {
+          alert("Review copied to clipboard!");
+        }).catch(err => {
+          console.error("Failed to copy: ", err);
+        });
+      } else {
+        alert("No review to copy! Generate a review first.");
+      }
+    }
+  </script>
+
+</body>
+</html>
