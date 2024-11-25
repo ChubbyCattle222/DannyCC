@@ -62,20 +62,34 @@
   <script>
     function generateReview() {
       const reviews = [
-        "Danny C provided one of the most attentive dining experiences I’ve ever had. He walked us through the menu with such detail, giving amazing tips on pairing sauces and meats. Throughout the evening, our table was always kept clean as dishes were cleared seamlessly, allowing us to fully enjoy the meal. His friendly reminder before last call was the perfect touch, ensuring we didn’t miss anything. This kind of service makes dining here unforgettable.",
-        "The level of service we received from Danny C was exceptional. He was incredibly informative about the menu and offered great advice for maximizing our experience. I was impressed by how he pre-bussed the table throughout the meal, keeping everything organized and neat. His reminder about last call felt thoughtful and gave us a chance to order a little extra. Danny truly cares about making each guest’s visit special.",
-        "Danny C turned our dinner into a flawless experience. He explained the menu in a way that made it easy to understand and enjoy, and his advice on the sauces was spot on. What stood out most was how he kept the table so tidy by clearing dishes promptly. His friendly last call reminder came just at the right time, ensuring we didn’t feel rushed. A truly professional and memorable dining experience.",
-        "I was blown away by Danny C’s attention to detail and professionalism. He made us feel welcome from the start, offering great suggestions on the menu and sauce pairings. As we enjoyed our meal, Danny made sure the table was always cleared of empty dishes, which added to the relaxed and enjoyable atmosphere. His heads-up before last call was thoughtful and much appreciated. I will definitely return for service like this.",
-        "Danny C’s service was top-notch and made our dining experience unforgettable. He gave us excellent recommendations on the menu and shared helpful tips for navigating the sauce bar. Throughout the meal, he kept our table clear, creating a clean and comfortable dining environment. When last call approached, Danny gave us a friendly reminder, which was the perfect finishing touch. This level of care and attentiveness is rare and deeply appreciated.",
-        "Our dinner was made even better thanks to Danny C. He was so informative about the menu and took the time to explain how to best enjoy the sauces and meats. I especially appreciated how he kept the table clear by removing dishes promptly, ensuring a seamless dining experience. His kind reminder before last call allowed us to make a few more selections without any stress. Exceptional service all around.",
-        "Danny C truly understands what it means to provide excellent service. He guided us through the menu with confidence and offered helpful tips that elevated the entire experience. The way he pre-bussed our table during the meal made everything feel so organized and enjoyable. His timely reminder about last call was appreciated, giving us the chance to order a little more without feeling rushed. I’ll definitely be back.",
-        "I can’t say enough good things about Danny C’s service. He was friendly, professional, and incredibly knowledgeable about the menu. He also ensured that our table stayed neat by clearing dishes as we finished, which added to the overall dining experience. When it was close to last call, Danny gave us a considerate reminder, which was the perfect touch to end the evening on a high note. Highly recommend!",
-        "Danny C made our night with his outstanding service. From the start, he walked us through the menu and made excellent suggestions on what to try. His attention to detail showed as he kept the table clear throughout the meal, making everything feel effortless. His polite reminder before last call was just what we needed to wrap up the evening. This was a truly wonderful dining experience.",
-        "It’s rare to find someone as attentive and professional as Danny C. He took the time to explain the menu in detail and gave us great tips on pairing different meats with the sauces. The way he pre-bussed the table throughout the night showed his dedication to making the meal enjoyable. When last call came around, his friendly reminder gave us the perfect opportunity to order a little extra. I can’t wait to return."
-        // Add 40 more reviews in the same format
+        "Danny C made our dinner a breeze. He walked us through how to get the most out of the menu, even suggesting some great sauces to pair with the meats. Tables were spotless the whole night. Plus, the friendly reminder about last call was timed perfectly. Fantastic experience!",
+        "What can I say about Danny C? He went above and beyond! I loved how he cleared our plates like magic and guided us through cooking techniques. The last call reminder felt more like a thoughtful nudge than anything. Five stars for sure.",
+        "Danny C was incredible. His advice on which sauces to try made such a difference in the meal. I really appreciated how tidy everything stayed throughout. Last call notice was the cherry on top of an already great night.",
+        "This place is great, but Danny C made it amazing. His tips on what to try and how to cook the meats were so helpful. He kept our table clean without us even noticing.",
+        "Danny C rocks. He gave us a full rundown on how to enjoy the meal and kept everything clear and organized the whole time. The reminder about last call was so nice—we didn’t even realize how fast time was flying. Thanks, Danny!",
+        "If you go here, ask for Danny C! He’s the best. He made sure our experience was smooth and fun. Plates were cleared so quickly, and his last call reminder was such a thoughtful touch. This guy knows how to make diners happy!",
+        "Dinner with Danny C as our server was unforgettable. He gave us great tips, kept the table spotless, and made sure we didn’t miss out on last call. It’s rare to find someone this good at their job!",
+        "Danny C was so helpful from start to finish. He gave clear advice on how to cook the meats and made sure the table was clean and tidy throughout. The reminder about last call was super helpful too!",
+        "Had a great time here thanks to Danny C. He explained everything really well and kept our table looking great. His friendly last call reminder made sure we didn’t miss anything. A++ service!",
+        "Danny C deserves a shoutout. He made us feel so welcome, kept the table clean, and gave excellent recommendations. The last call heads-up was a thoughtful touch. Couldn’t ask for more!",
+        "Service like Danny C’s is hard to come by. He was friendly, attentive, and really knew his stuff. The table was cleared so quickly, and the last call reminder was perfectly timed. Thanks, Danny!",
+        "Danny C’s service was top-notch. He showed us how to cook the meats and explained all the sauces. The way he kept our space clear was incredible. And the last call reminder? Super thoughtful.",
+        "We had an awesome time thanks to Danny C! He kept everything running smoothly, and our table was always neat. His last call heads-up was much appreciated too.",
+        "Danny C made our night so much better. His attention to detail and helpful tips were amazing. Tables were cleared promptly, and we loved his friendly reminder about last call!",
+        "Big thanks to Danny C for making our dinner stress-free. He explained everything perfectly and kept the table clean. The last call notice felt like he was really looking out for us.",
+        "I can’t believe how great Danny C was. He gave us helpful tips for cooking and kept everything organized. His last call reminder came just in time for dessert!",
+        "Huge thanks to Danny C for such a wonderful experience. He guided us through the menu, kept the table spotless, and reminded us about last call with a smile. Fantastic job!",
+        "Service doesn’t get much better than what Danny C provided. He was attentive, helpful, and kept our table clear all night. His last call reminder felt like a thoughtful gesture. Amazing.",
+        "Danny C is a pro. He made sure we enjoyed every bite and kept the table looking great. The reminder about last call was just the thing we needed to order our final round.",
+        "I don’t usually write reviews, but Danny C earned it. From keeping the table clean to suggesting how to pair sauces, he was fantastic. Loved the friendly last call reminder too!",
+        "Danny C’s service was absolutely perfect. His suggestions made the meal so much better, and he kept everything tidy. The last call reminder showed he really cared about our experience.",
+        "Honestly, Danny C is the reason we’ll come back. His advice was spot on, and he kept the table in great shape. The heads-up for last call was the cherry on top. Thanks!",
+        "Dinner with Danny C as our server was a total win. He made us feel comfortable, kept the table spotless, and reminded us about last call in the nicest way possible.",
+        "Danny C’s attention to detail blew us away. He cleared plates seamlessly and gave awesome tips for cooking and sauces. His last call reminder was so appreciated. Amazing job!"
+        // Continue adding more unique, creative reviews up to 50
       ];
 
-      // Randomly select a review
+      // Pick a random review
       const randomReview = reviews[Math.floor(Math.random() * reviews.length)];
 
       // Display the review
@@ -92,7 +106,7 @@
           console.error("Failed to copy: ", err);
         });
       } else {
-        alert("No review to copy! Generate a review first.");
+        alert("No review to copy. Generate a review first.");
       }
     }
   </script>
