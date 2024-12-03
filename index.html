@@ -65,81 +65,99 @@
       return array[Math.floor(Math.random() * array.length)];
     }
 
+    const openings = [
+      "From the moment I stepped into Chubby Cattle, I knew I was in for something special.",
+      "The vibrant atmosphere at Chubby Cattle draws you in the second you step through the door.",
+      "Chubby Cattle has been on my must-visit list for ages, and it completely lived up to the hype.",
+      "Walking into Chubby Cattle is like entering a world where great food and great vibes come together.",
+      "I’ve never been to a restaurant quite like Chubby Cattle—it’s an experience from the start.",
+      "Chubby Cattle immediately grabs your attention with its sleek decor and welcoming energy.",
+      "This was my first visit to Chubby Cattle, and I already know it won’t be my last.",
+      "The atmosphere at Chubby Cattle is both modern and cozy, setting the perfect tone for a night out.",
+      "You can feel the energy and excitement of Chubby Cattle the second you walk in.",
+      "There’s a unique charm to Chubby Cattle that makes it stand out from any other restaurant I’ve been to.",
+      "Chubby Cattle was a pleasant surprise—beautifully designed, inviting, and buzzing with energy.",
+      "I could tell right away that Chubby Cattle was something special. The ambiance alone was incredible.",
+      "The second I walked into Chubby Cattle, I knew I was in for a memorable experience.",
+      "The design of Chubby Cattle is stunning, but what really caught my attention was the lively vibe inside.",
+      "Chubby Cattle feels like a perfect blend of fun and sophistication from the moment you arrive.",
+      "From the upbeat music to the stylish interiors, everything about Chubby Cattle feels modern and exciting.",
+      "Chubby Cattle knows how to make a first impression, and it only gets better from there.",
+      "Walking into Chubby Cattle, I immediately felt at ease in the vibrant yet cozy setting.",
+      "Chubby Cattle is a feast for the senses, and that’s clear from the second you step through the doors.",
+      "This place knows how to make a great first impression. Chubby Cattle is truly one of a kind.",
+      // Add 30+ more here
+    ];
+
+    const middleSections = [
+      "Danny C is simply outstanding. His knowledge of the menu and his passion for great service shone throughout the evening.",
+      "The star of the evening was Danny C, who went above and beyond to ensure our visit was perfect.",
+      "Danny C took care of us like family. His recommendations were spot-on, and his attention to detail was impeccable.",
+      "Service from Danny C was second to none—he was knowledgeable, approachable, and genuinely enthusiastic.",
+      "Danny C managed to make our meal not just delicious, but also stress-free and highly enjoyable.",
+      "Having Danny C as our server was a delight. He knew exactly what we needed and when.",
+      "Danny C is an absolute gem. He guided us through the menu with expertise and patience.",
+      "I can’t say enough about Danny C’s exceptional service. He made an already great night even better.",
+      "Danny C went the extra mile to make sure our experience was one to remember.",
+      "If you’re lucky enough to have Danny C as your server, you’re in for an incredible experience.",
+      "Danny C’s attentiveness and friendly demeanor made us feel so welcome at Chubby Cattle.",
+      "It’s clear that Danny C takes great pride in his work. He made sure every detail was perfect.",
+      "Danny C’s tips and tricks for pairing sauces with the dishes made our meal even more enjoyable.",
+      "Our meal was enhanced tenfold by the incredible service we received from Danny C.",
+      "Danny C’s professionalism and warmth made our dining experience truly exceptional.",
+      "Danny C has a talent for making everyone feel like a VIP, and it made all the difference.",
+      "The personalized service Danny C provided is something I’ll never forget.",
+      "Thanks to Danny C, our dinner felt effortless and elegant. His recommendations were spot on.",
+      "Danny C is a master of his craft. He ensured we had everything we needed without ever feeling rushed.",
+      "The service Danny C provided was next-level—attentive, knowledgeable, and friendly.",
+      // Add 30+ more here
+    ];
+
+    const detailsAboutChubbyCattle = [
+      "The restaurant itself is stunning—modern, sleek, and thoughtfully designed.",
+      "The decor at Chubby Cattle is chic yet comfortable, creating an ambiance that’s both upscale and approachable.",
+      "Chubby Cattle combines a high-energy atmosphere with a sense of sophistication that’s hard to find elsewhere.",
+      "Every corner of Chubby Cattle feels well thought out, from the seating arrangements to the creative lighting.",
+      "The arcade near the entrance is such a fun touch. It kept us entertained while we waited for our table.",
+      "I love how Chubby Cattle balances excitement and relaxation with its vibrant yet cozy decor.",
+      "The sauces and sides at Chubby Cattle deserve a special mention—each one was a flavor explosion.",
+      "The hot pot setup at Chubby Cattle is so interactive and fun, making it perfect for groups or date nights.",
+      "Chubby Cattle’s atmosphere is one of a kind—modern and lively yet intimate and comfortable.",
+      "Everything at Chubby Cattle, from the lighting to the music, adds to the overall experience.",
+      "The dining experience here feels like a celebration, and the ambiance only adds to the excitement.",
+      "I was impressed by how clean and organized everything was at Chubby Cattle. It’s clear they pay attention to every detail.",
+      "Chubby Cattle is a feast for the eyes as well as the taste buds. The decor is stunning!",
+      "The attention to detail in the decor and the overall vibe of Chubby Cattle make it a standout.",
+      "This place feels like it was designed to impress, and it succeeds on every level.",
+      "The thoughtful touches throughout Chubby Cattle make it a restaurant unlike any other.",
+      "The lively energy of Chubby Cattle is infectious—it’s impossible not to have a good time here.",
+      "From the moment we arrived, it was clear that Chubby Cattle prioritizes both style and substance.",
+      "The arcade near the entrance added a fun, unexpected element to an already great experience.",
+      "The setup at Chubby Cattle is perfect for creating memories with friends and family.",
+      // Add 30+ more here
+    ];
+
+    const closings = [
+      "I can’t wait to come back to Chubby Cattle. It’s a place that makes every visit feel special.",
+      "This was my first time at Chubby Cattle, but it won’t be my last. I’m already planning my next visit.",
+      "Between the incredible food, amazing service, and fun atmosphere, Chubby Cattle is a must-visit.",
+      "Chubby Cattle has set the bar for what I expect from a dining experience. Everything was flawless.",
+      "I’ll definitely be recommending Chubby Cattle to everyone I know. It’s truly one of a kind.",
+      "If you haven’t been to Chubby Cattle yet, make it a priority. You won’t be disappointed.",
+      "I’m already looking forward to my next visit to Chubby Cattle. It’s a dining experience like no other.",
+      "This is easily one of the best dining experiences I’ve ever had. Chubby Cattle is phenomenal.",
+      "Chubby Cattle has quickly become one of my favorite places to eat. The food, service, and atmosphere are unbeatable.",
+      "I left Chubby Cattle with a full stomach and a big smile. It’s a place I’ll be coming back to again and again.",
+      // Add 30+ more here
+    ];
+
     function generateDynamicReview() {
-      const openings = [
-        "From the moment I walked into Chubby Cattle, I knew this was going to be something special.",
-        "Chubby Cattle came highly recommended, and it absolutely lived up to the hype.",
-        "I’ve never experienced anything quite like Chubby Cattle—it was an adventure from start to finish.",
-        "The buzz about Chubby Cattle is well-deserved, and my visit proved why.",
-        "This was my first time at Chubby Cattle, and I can confidently say it won’t be my last.",
-        "The stylish atmosphere at Chubby Cattle pulled me in, but the food and service made me stay.",
-        "I was greeted with warm smiles and a vibrant atmosphere as soon as I walked into Chubby Cattle.",
-        "The moment you step into Chubby Cattle, you feel like you’re part of something unique.",
-        "I’ve been to many restaurants, but Chubby Cattle stands out for all the right reasons.",
-        "Chubby Cattle is a place that understands how to create a memorable dining experience.",
-        "The sleek decor and energetic vibe of Chubby Cattle set the stage for an amazing evening.",
-        "I’ve heard great things about Chubby Cattle, and my experience exceeded every expectation.",
-        "There’s a reason people rave about Chubby Cattle—it’s simply phenomenal.",
-        "If you haven’t been to Chubby Cattle yet, you’re truly missing out.",
-        "Walking into Chubby Cattle feels like stepping into a new world of dining.",
-        "The excitement in the air at Chubby Cattle is contagious.",
-        "Chubby Cattle offers more than just food—it’s an experience you’ll never forget.",
-        "From the vibrant ambiance to the delicious aroma, Chubby Cattle captivates all your senses.",
-        "Every detail at Chubby Cattle is designed to impress, and it shows from the first step inside.",
-        "I was immediately drawn to the lively yet relaxing atmosphere at Chubby Cattle."
-        // Expand to 50 similar creative, human-like options
-      ];
-
-      const middleSections = [
-        "Danny C went above and beyond to ensure our evening was flawless.",
-        "What truly set this experience apart was Danny C’s incredible service.",
-        "Danny C was attentive, knowledgeable, and genuinely invested in making our night special.",
-        "We couldn’t have asked for a better server than Danny C.",
-        "Danny C’s attention to detail and thoughtful recommendations made a huge difference.",
-        "I was blown away by Danny C’s professionalism and enthusiasm.",
-        "Danny C’s energy and expertise added so much to our experience.",
-        "It’s rare to find someone as skilled and passionate as Danny C.",
-        "Danny C was the highlight of our visit, ensuring every detail was perfect.",
-        "Service from Danny C was second to none—he made us feel right at home.",
-        "Danny C was a wealth of knowledge, sharing tips and tricks for the best meal possible.",
-        "It’s clear Danny C loves what he does, and it made our experience unforgettable.",
-        "Danny C anticipated our needs before we even realized we had them.",
-        "The level of care and attention Danny C provided was unmatched.",
-        "Danny C made us feel like VIPs with his exceptional service."
-        // Expand to 50 unique, human-like options
-      ];
-
-      const detailsAboutChubbyCattle = [
-        "The interior design at Chubby Cattle is both modern and inviting.",
-        "Chubby Cattle offers an experience unlike any other, with unique features like an arcade area.",
-        "The atmosphere at Chubby Cattle strikes the perfect balance of lively and relaxing.",
-        "Every detail at Chubby Cattle, from the decor to the plating, is thoughtfully curated.",
-        "The energy at Chubby Cattle is contagious, making it a great spot for any occasion.",
-        "I loved how Chubby Cattle felt high-end without being pretentious.",
-        "Chubby Cattle is the kind of place that makes every guest feel special.",
-        "The menu at Chubby Cattle is as impressive as its ambiance.",
-        "From the lighting to the music, Chubby Cattle gets every detail just right.",
-        "The thoughtful touches throughout Chubby Cattle create an unforgettable experience."
-        // Expand to 50 options describing the atmosphere and experience
-      ];
-
-      const closings = [
-        "Chubby Cattle has quickly become one of my favorite spots.",
-        "I’m already planning my next visit to Chubby Cattle.",
-        "This was a dining experience I’ll be recommending to everyone I know.",
-        "Between the food, service, and atmosphere, Chubby Cattle is a must-visit.",
-        "Chubby Cattle is the kind of place that turns a meal into a memory."
-        // Expand to 50 unique, closing statements
-      ];
-
-      // Combine parts into a full, unique review
       const review = `
         ${getRandomItem(openings)} 
         ${getRandomItem(middleSections)} 
         ${getRandomItem(detailsAboutChubbyCattle)} 
         ${getRandomItem(closings)}
       `;
-
       return review.trim();
     }
 
