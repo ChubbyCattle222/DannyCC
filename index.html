@@ -61,27 +61,47 @@
   <script>
     const usedReviews = new Set();
 
+    function getRandomItem(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
+
     function generateDynamicReview() {
-      const adjectives = ["amazing", "outstanding", "fantastic", "unforgettable", "exceptional"];
-      const nouns = ["experience", "service", "evening", "meal", "dining adventure"];
-      const actions = [
-        "explained how to make the most of the menu with expert tips",
-        "was attentive and ensured everything ran smoothly",
-        "kept our table immaculate throughout the meal",
-        "made thoughtful recommendations that elevated every bite",
-        "kindly reminded us of last call without rushing us"
-      ];
-      const extras = [
-        "The vibe at Chubby Cattle is so inviting and modern.",
-        "The innovative interior and fun atmosphere make Chubby Cattle stand out.",
-        "The setup at Chubby Cattle is perfect for enjoying a relaxing meal with friends.",
-        "Chubby Cattle is the ideal mix of fantastic food and unique ambiance.",
-        "From the moment you walk in, Chubby Cattle makes you feel welcomed and excited."
+      const openings = [
+        "Stepping into Chubby Cattle is like entering a food lover's dream.",
+        "If you're searching for an unforgettable dining experience, look no further than Chubby Cattle.",
+        "I had heard so much about Chubby Cattle, but experiencing it firsthand was even better than I imagined.",
+        "From the second we arrived at Chubby Cattle, the vibe was absolutely perfect.",
+        "Walking into Chubby Cattle, I was instantly impressed by the ambiance and attention to detail."
       ];
 
-      const review = `Danny C provided an ${adjectives[Math.floor(Math.random() * adjectives.length)]} 
-      ${nouns[Math.floor(Math.random() * nouns.length)]}. He ${actions[Math.floor(Math.random() * actions.length)]}. 
-      ${extras[Math.floor(Math.random() * extras.length)]}`;
+      const middleSections = [
+        "Danny C went above and beyond to make sure our night was memorable. From walking us through the menu to suggesting combinations I’d never have thought of, his expertise was evident. He managed to strike the perfect balance of being attentive but never overbearing.",
+        "What stood out most was Danny C’s genuine care for our experience. He shared cooking tips, cleared our plates seamlessly, and kept everything running like clockwork. His friendly demeanor made us feel completely at home.",
+        "Danny C’s service was impeccable. He patiently explained how to get the best flavors from each dish, offered thoughtful recommendations, and was always nearby when we needed him. It’s clear he loves what he does, and it shows.",
+        "The highlight of our visit was Danny C. His energy, knowledge, and enthusiasm elevated our entire evening. He gave us great tips, checked in at the right moments, and made us feel valued as guests."
+      ];
+
+      const detailsAboutChubbyCattle = [
+        "Chubby Cattle’s interior design is sleek and modern, yet it feels warm and welcoming. The lighting is perfect—not too dim, not too bright—and the music adds just the right vibe to the room.",
+        "I was particularly impressed by the unique layout of Chubby Cattle. The tables are spacious, the decor is contemporary, and the atmosphere is lively but never overwhelming.",
+        "This restaurant isn’t just about great food; it’s a complete experience. From the arcade at the entrance to the high-quality ingredients, Chubby Cattle nails every aspect of a fun night out.",
+        "One thing I absolutely loved about Chubby Cattle is the little details. The sauces, the perfectly designed tables, and even the cleanliness all show how much thought has gone into creating a great dining experience."
+      ];
+
+      const closings = [
+        "Between the incredible food, the impeccable service from Danny C, and the fun atmosphere, Chubby Cattle is now one of my favorite spots.",
+        "I can’t recommend Chubby Cattle enough! It’s the kind of place that leaves you smiling long after you leave, especially with someone like Danny C ensuring everything is perfect.",
+        "This was truly a one-of-a-kind experience, and I’m already planning my next visit to Chubby Cattle. Don’t miss out on this gem!",
+        "Chubby Cattle is a must-visit for anyone who values great food and even better service. Thanks to Danny C, our evening was perfect from start to finish."
+      ];
+
+      // Combine parts into a full, unique review
+      const review = `
+        ${getRandomItem(openings)} 
+        ${getRandomItem(middleSections)} 
+        ${getRandomItem(detailsAboutChubbyCattle)} 
+        ${getRandomItem(closings)}
+      `;
 
       return review.trim();
     }
